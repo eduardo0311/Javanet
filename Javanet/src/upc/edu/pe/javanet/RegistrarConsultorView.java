@@ -188,101 +188,6 @@ public class RegistrarConsultorView extends CustomComponent implements View,
 		FormLayout flDatosSolicitus = new FormLayout();
 		
 				
-		// combobox para cantidad de colaboradores
-	/*	final ComboBox cmbCantColab = new ComboBox("Cantidad de Colaboradores");
-		cmbCantColab.setNullSelectionAllowed(true);
-		cmbCantColab.setWidth("100%");
-		cmbCantColab.setHeight("10%"); // Default
-		cmbCantColab.addItem("-SELECCIONE-");
-		cmbCantColab.setNullSelectionItemId("-SELECCIONE-");
-		cmbCantColab.setWidth("100%");
-		cmbCantColab.addItem("");
-		cmbCantColab.addItem("");
-		cmbCantColab.addItem("");
-		cmbCantColab.addItem("");
-		cmbCantColab.addItem("");
-		cmbCantColab.addItem("");
-		
-		final Label lblCantColabMsgError = new Label("Seleccione cantidad de colaboradores!");
-		lblCantColabMsgError.setVisible(false);
-		lblCantColabMsgError.setWidth("100%");
-		lblCantColabMsgError.setHeight("10%"); // Default
-		
-		final ComboBox cmbPerfil = new ComboBox("Perfil de Colaborador");
-		cmbPerfil.setNullSelectionAllowed(true);
-		cmbPerfil.setWidth("100%");
-		cmbPerfil.setHeight("10%"); // Default
-		cmbPerfil.addItem("-SELECCIONE-");
-		cmbPerfil.setNullSelectionItemId("-SELECCIONE-");
-		cmbPerfil.addItem("");
-		cmbPerfil.addItem("");
-		cmbPerfil.addItem("");
-		
-		final Label lblPerfilMsgError = new Label("Seleccione un perfil!");
-		lblPerfilMsgError.setVisible(false);
-		lblPerfilMsgError.setWidth("100%");
-		lblPerfilMsgError.setHeight("10%"); // Default
-		
-		final ComboBox cmbTecnologia = new ComboBox("Tecnología");
-		cmbTecnologia.setNullSelectionAllowed(true);
-		cmbTecnologia.setWidth("100%");
-		cmbTecnologia.setHeight("10%"); // Default
-		cmbTecnologia.addItem("-SELECCIONE-");
-		cmbTecnologia.setNullSelectionItemId("-SELECCIONE-");
-		cmbTecnologia.addItem("");
-		cmbTecnologia.addItem("");
-		cmbTecnologia.addItem("");
-		
-		final Label lblTecnologiaMsgError = new Label("Seleccione una tecnología!");
-		lblTecnologiaMsgError.setVisible(false);
-		lblTecnologiaMsgError.setWidth("100%");
-		lblTecnologiaMsgError.setHeight("10%"); // Default
-		
-		final ComboBox cmbExperRubro = new ComboBox("Experiencia en rubro");
-		cmbExperRubro.setNullSelectionAllowed(true);
-		cmbExperRubro.setWidth("100%");
-		cmbExperRubro.setHeight("10%"); // Default
-		cmbExperRubro.addItem("-SELECCIONE-");
-		cmbExperRubro.setNullSelectionItemId("-SELECCIONE-");
-		cmbExperRubro.addItem("");
-		cmbExperRubro.addItem("");
-		cmbExperRubro.addItem("");
-		
-		final Label lblExperienciaRubroMsgError = new Label("Seleccione rubro de la experiencia!");
-		lblExperienciaRubroMsgError.setVisible(false);
-		lblExperienciaRubroMsgError.setWidth("100%");
-		lblExperienciaRubroMsgError.setHeight("10%"); // Default
-		
-		final TextArea txtComentario = new TextArea("Comentario");
-		txtComentario.setWidth("100%");
-		txtComentario.setHeight("10%"); // Default
-	
-		flDatosSolicitus.addComponent(cmbCantColab);
-		flDatosSolicitus.setComponentAlignment(cmbCantColab, Alignment.MIDDLE_LEFT);
-		flDatosSolicitus.addComponent(lblCantColabMsgError);
-		flDatosSolicitus.setComponentAlignment(lblCantColabMsgError, Alignment.MIDDLE_LEFT);
-    
-		flDatosSolicitus.addComponent(cmbPerfil);
-		flDatosSolicitus.setComponentAlignment(cmbPerfil, Alignment.MIDDLE_LEFT);
-		flDatosSolicitus.addComponent(lblPerfilMsgError);
-		flDatosSolicitus.setComponentAlignment(lblPerfilMsgError, Alignment.MIDDLE_LEFT);
-		
-		flDatosSolicitus.addComponent(cmbTecnologia);
-		flDatosSolicitus.setComponentAlignment(cmbTecnologia, Alignment.MIDDLE_LEFT);
-		flDatosSolicitus.addComponent(lblTecnologiaMsgError);
-		flDatosSolicitus.setComponentAlignment(lblTecnologiaMsgError, Alignment.MIDDLE_LEFT);
-		
-		flDatosSolicitus.addComponent(cmbExperRubro);
-		flDatosSolicitus.setComponentAlignment(cmbExperRubro, Alignment.MIDDLE_LEFT);
-		flDatosSolicitus.addComponent(lblExperienciaRubroMsgError);
-		flDatosSolicitus.setComponentAlignment(lblExperienciaRubroMsgError, Alignment.MIDDLE_LEFT);
-		
-		flDatosSolicitus.addComponent(txtComentario);
-		flDatosSolicitus.setComponentAlignment(txtComentario, Alignment.MIDDLE_LEFT);
-		
-		 frmSolicitudConsultores.addComponent(flDatosSolicitus);
-		frmSolicitudConsultores.setComponentAlignment(flDatosSolicitus, Alignment.MIDDLE_CENTER);
-		*/
 		final Label lblMsgError = new Label("El Consultor se creó con éxito");
 		lblMsgError.setWidth("100%");
 		lblMsgError.setHeight("10%"); // Default
@@ -312,49 +217,8 @@ public class RegistrarConsultorView extends CustomComponent implements View,
 		    		lblProyectoMsgError.setVisible(false);
 		    		//verifica--;
 		    	}
-		    	/*
-		    	if(txtNombreCliente.getValue() ==  null){
-		    		lblCantColabMsgError.setVisible(true);
-		    		verifica++;
-			    	lblMsgError.setVisible(false);
-		    	}else{
-		    		lblCantColabMsgError.setVisible(false);
-		    		//verifica--;
-		    	} 
-		    	
-		    	if(cmbPerfil.getValue() ==  null){
-		    		lblPerfilMsgError.setVisible(true);
-		    		verifica++;
-		    		lblMsgError.setVisible(false);
-		    	}else{
-		    		lblPerfilMsgError.setVisible(false);
-		    		//verifica--;
-		    	}
-		    	
-		    	if(cmbTecnologia.getValue() ==  null){
-		    		lblTecnologiaMsgError.setVisible(true);
-		    		verifica++;
-			    	lblMsgError.setVisible(false);
-		    	}else{
-		    		lblTecnologiaMsgError.setVisible(false);
-		    		//verifica--;
-		    	}
-		    	
-		    	if(cmbExperRubro.getValue() ==  null){
-		    		lblExperienciaRubroMsgError.setVisible(true);
-		    		verifica++;
-			    	lblMsgError.setVisible(false);
-		    	}else{
-		    		lblExperienciaRubroMsgError.setVisible(false);
-		    		//verifica--;
-		    	}
-		    	*/
 		    	if(verifica == 0){
 		    		
-		    		//tableDetalle.size();     
-		    		//Notification.show("Tala tiene " +
-		    		//		tableDetalle.size() + " clicked.");
-		    		//int verificaGrabar = service.grabar(tableDetalle);
 		    		int verificaGrabar = grabar(tableDetalle);
 		    		if(verificaGrabar == 0){
 		    			lblMsgError.setVisible(true);
@@ -386,42 +250,6 @@ public class RegistrarConsultorView extends CustomComponent implements View,
 		    		//verifica--;
 		    	}
 		    	
-		    /*	if(cmbCantColab.getValue() ==  null){
-		    		lblCantColabMsgError.setVisible(true);
-		    		verifica++;
-			    	lblMsgError.setVisible(false);
-		    	}else{
-		    		lblCantColabMsgError.setVisible(false);
-		    		//verifica--;
-		    	}
-		    	
-		    	if(cmbPerfil.getValue() ==  null){
-		    		lblPerfilMsgError.setVisible(true);
-		    		verifica++;
-		    		lblMsgError.setVisible(false);
-		    	}else{
-		    		lblPerfilMsgError.setVisible(false);
-		    		//verifica--;
-		    	}
-		    	
-		    	if(cmbTecnologia.getValue() ==  null){
-		    		lblTecnologiaMsgError.setVisible(true);
-		    		verifica++;
-			    	lblMsgError.setVisible(false);
-		    	}else{
-		    		lblTecnologiaMsgError.setVisible(false);
-		    		//verifica--;
-		    	}
-		    	
-		    	if(cmbExperRubro.getValue() ==  null){
-		    		lblExperienciaRubroMsgError.setVisible(true);
-		    		verifica++;
-			    	lblMsgError.setVisible(false);
-		    	}else{
-		    		lblExperienciaRubroMsgError.setVisible(false);
-		    		//verifica--;
-		    	}
-		    	*/
 		    	if(verifica == 0){
 		    		//lblMsgError.setVisible(true);
 		    		   
@@ -436,14 +264,6 @@ public class RegistrarConsultorView extends CustomComponent implements View,
              	    });
              	    generarSolicitudField.addStyleName("link");
          	    
-             	  /* tableDetalle.addItem(new Object[] {cmbCantColab.getValue().toString(), cmbPerfil.getValue().toString(),
-             			  cmbTecnologia.getValue().toString(), cmbExperRubro.getValue().toString(), generarSolicitudField},
-         	                  tableDetalle.size()+1);
-             	   tableDetalle.setPageLength(tableDetalle.size());
-		    	}else{
-		    		lblMsgError.setVisible(false);
-		    	} 
-		    	*/
              	   tableDetalle.addItem(new Object[] {cmbProyecto.getValue().toString(), txtEspecialCliente.getValue(),
              			  txtNombreCliente.getValue(),txtApellidoCliente.getValue(), generarSolicitudField},
           	                  tableDetalle.size()+1);
@@ -502,8 +322,6 @@ public class RegistrarConsultorView extends CustomComponent implements View,
 		 tableDetalle.setSizeFull();
 		 //tableDetalle.setWidth("50%");
 		 tablaDatos.setExpandRatio(tableDetalle, 1);
-		 //tablaDatos.setComponentAlignment(titulo, Alignment.BOTTOM_CENTER);
-		 //tablaDatos.setMargin(new MarginInfo  (true, true, true, true));
 		 
 		
         HorizontalLayout viewLayout = new HorizontalLayout(frmSolColabPadre, tablaDatos );
