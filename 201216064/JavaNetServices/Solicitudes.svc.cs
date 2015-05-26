@@ -14,6 +14,7 @@ namespace JavaNetServices
     public class Solicitudes : ISolicitudes
     {
     
+       
         private SolicitudDAO solicitudDAO = null;
         private SolicitudDAO SolicitudDAO {
             get
