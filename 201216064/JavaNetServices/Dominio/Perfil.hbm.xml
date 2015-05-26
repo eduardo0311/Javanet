@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2"
+                   assembly="JavaNetServices"
+                   namespace="JavaNetServices.Dominio"
+                   default-lazy="false">
+  <class name="Perfil" table="t_perfil">
+    <id name="CodPerfil" column="codPerfil">
+      <generator class="increment" />
+    </id>
+    <property name="NombrePerfil" column="nombrePerfil" />
+  </class>
+</hibernate-mapping> 

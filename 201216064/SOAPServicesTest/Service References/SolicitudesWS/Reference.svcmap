@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="712023e7-ac1a-4b5c-befe-7cb738527ec8" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:4765/Solicitudes.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="Solicitudes.xsd" MetadataType="Schema" ID="912ca205-edc0-4671-85cf-69856ce7ab42" SourceId="1" SourceUrl="http://localhost:4765/Solicitudes.svc?xsd=xsd1" />
+    <MetadataFile FileName="Solicitudes1.xsd" MetadataType="Schema" ID="1637f94c-d6a4-46f6-83f2-36d391b389fc" SourceId="1" SourceUrl="http://localhost:4765/Solicitudes.svc?xsd=xsd0" />
+    <MetadataFile FileName="Solicitudes.wsdl" MetadataType="Wsdl" ID="9f90526b-e187-4462-b923-80e1696c406a" SourceId="1" SourceUrl="http://localhost:4765/Solicitudes.svc?wsdl" />
+    <MetadataFile FileName="Solicitudes.disco" MetadataType="Disco" ID="22ec88f9-d24e-449c-8b57-54107143723b" SourceId="1" SourceUrl="http://localhost:4765/Solicitudes.svc?disco" />
+    <MetadataFile FileName="Solicitudes2.xsd" MetadataType="Schema" ID="96ff1ed5-6030-4d74-8ed5-dd4584d1ceb1" SourceId="1" SourceUrl="http://localhost:4765/Solicitudes.svc?xsd=xsd2" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>
