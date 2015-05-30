@@ -1,0 +1,6 @@
+c:\users\user\documents\visual studio 2013\Projects\ProyectoDSDS4\RESTServices\bin\RESTServices.dll.config
+c:\users\user\documents\visual studio 2013\Projects\ProyectoDSDS4\RESTServices\bin\RESTServices.dll
+c:\users\user\documents\visual studio 2013\Projects\ProyectoDSDS4\RESTServices\bin\RESTServices.pdb
+c:\users\user\documents\visual studio 2013\Projects\ProyectoDSDS4\RESTServices\obj\Debug\RESTServices.dll
+c:\users\user\documents\visual studio 2013\Projects\ProyectoDSDS4\RESTServices\obj\Debug\RESTServices.pdb
+C:\Users\user\documents\visual studio 2013\Projects\ProyectoDSDS4\RESTServices\obj\Debug\RESTServices.csprojResolveAssemblyReference.cache
