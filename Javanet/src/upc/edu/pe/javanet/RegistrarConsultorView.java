@@ -5,7 +5,7 @@ import java.util.HashMap;
 
 import upc.edu.pe.javanet.solicitudService.Solicitud;
 import upc.edu.pe.javanet.solicitudService.SolicitudDetalle;
-import upc.edu.pe.javanet.solicitudService.SolicitudService;
+import upc.edu.pe.javanet.consultorService.ConsultorService;
 
 import com.vaadin.data.Item;
 import com.vaadin.data.Property;
@@ -40,7 +40,7 @@ public class RegistrarConsultorView extends CustomComponent implements View,
 	public static final String NAME = "";
 	Label text = new Label();
 	
-	    SolicitudService service = SolicitudService.createDemoService();
+	    ConsultorService service = new ConsultorService();
 
     Button logout = new Button("Logout", new Button.ClickListener() {
 
@@ -209,7 +209,23 @@ public class RegistrarConsultorView extends CustomComponent implements View,
 		btnGrabar.addClickListener(new Button.ClickListener() {
 		    public void buttonClick(ClickEvent event) {
 		    	int verifica = 0;
-		    	if( cmbProyecto.getValue() ==  null){
+		    	if( txtNombreCliente.getValue() ==  null){
+		    		lblProyectoMsgError.setVisible(true);
+		    		verifica++;
+			    	lblMsgError.setVisible(false);
+		    	}else{
+		    		lblProyectoMsgError.setVisible(false);
+		    		//verifica--;
+		    	}
+		    	if( txtApellidoCliente.getValue() ==  null){
+		    		lblProyectoMsgError.setVisible(true);
+		    		verifica++;
+			    	lblMsgError.setVisible(false);
+		    	}else{
+		    		lblProyectoMsgError.setVisible(false);
+		    		//verifica--;
+		    	}
+		    	if( txtEspecialCliente.getValue() ==  null){
 		    		lblProyectoMsgError.setVisible(true);
 		    		verifica++;
 			    	lblMsgError.setVisible(false);
@@ -219,7 +235,7 @@ public class RegistrarConsultorView extends CustomComponent implements View,
 		    	}
 		    	if(verifica == 0){
 		    		
-		    		int verificaGrabar = grabar(tableDetalle);
+		    		int verificaGrabar = service.grabarConsultor("101", txtNombreCliente.getValue(), txtApellidoCliente.getValue(), txtEspecialCliente.getValue());
 		    		if(verificaGrabar == 0){
 		    			lblMsgError.setVisible(true);
 		    		}else{
