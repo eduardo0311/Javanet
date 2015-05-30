@@ -1,0 +1,17 @@
+E:\Erika\201216064\SOAPServicesTest\bin\Debug\SOAPServicesTest.dll.config
+E:\Erika\201216064\SOAPServicesTest\bin\Debug\SOAPServicesTest.dll
+E:\Erika\201216064\SOAPServicesTest\bin\Debug\SOAPServicesTest.pdb
+E:\Erika\201216064\SOAPServicesTest\obj\Debug\SOAPServicesTest.dll
+E:\Erika\201216064\SOAPServicesTest\obj\Debug\SOAPServicesTest.pdb
+C:\Users\usuario\Downloads\Erika\Erika\201216064\SOAPServicesTest\bin\Debug\SOAPServicesTest.dll.config
+C:\Users\usuario\Downloads\Erika\Erika\201216064\SOAPServicesTest\bin\Debug\SOAPServicesTest.dll
+C:\Users\usuario\Downloads\Erika\Erika\201216064\SOAPServicesTest\bin\Debug\SOAPServicesTest.pdb
+C:\Users\usuario\Downloads\Erika\Erika\201216064\SOAPServicesTest\obj\Debug\SOAPServicesTest.csprojResolveAssemblyReference.cache
+C:\Users\usuario\Downloads\Erika\Erika\201216064\SOAPServicesTest\obj\Debug\SOAPServicesTest.dll
+C:\Users\usuario\Downloads\Erika\Erika\201216064\SOAPServicesTest\obj\Debug\SOAPServicesTest.pdb
+D:\UPC\Ciclo 7\Desarrollo para Sistemas Distribuidos\Proyecto\201216064\SOAPServicesTest\obj\Debug\SOAPServicesTest.csprojResolveAssemblyReference.cache
+D:\UPC\Ciclo 7\Desarrollo para Sistemas Distribuidos\Proyecto\201216064\SOAPServicesTest\obj\Debug\SOAPServicesTest.dll
+D:\UPC\Ciclo 7\Desarrollo para Sistemas Distribuidos\Proyecto\201216064\SOAPServicesTest\bin\Debug\SOAPServicesTest.dll.config
+D:\UPC\Ciclo 7\Desarrollo para Sistemas Distribuidos\Proyecto\201216064\SOAPServicesTest\bin\Debug\SOAPServicesTest.dll
+D:\UPC\Ciclo 7\Desarrollo para Sistemas Distribuidos\Proyecto\201216064\SOAPServicesTest\bin\Debug\SOAPServicesTest.pdb
+D:\UPC\Ciclo 7\Desarrollo para Sistemas Distribuidos\Proyecto\201216064\SOAPServicesTest\obj\Debug\SOAPServicesTest.pdb

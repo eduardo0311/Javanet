@@ -1,0 +1,16 @@
+E:\Erika\201216064\SOAPServices\bin\SOAPServices.dll.config
+E:\Erika\201216064\SOAPServices\bin\SOAPServices.dll
+E:\Erika\201216064\SOAPServices\bin\SOAPServices.pdb
+E:\Erika\201216064\SOAPServices\bin\Iesi.Collections.dll
+E:\Erika\201216064\SOAPServices\bin\NHibernate.dll
+E:\Erika\201216064\SOAPServices\obj\Debug\SOAPServices.dll
+E:\Erika\201216064\SOAPServices\obj\Debug\SOAPServices.pdb
+E:\Erika\201216064\SOAPServices\obj\Debug\SOAPServices.csprojResolveAssemblyReference.cache
+C:\Users\usuario\Downloads\Erika\Erika\201216064\SOAPServices\obj\Debug\SOAPServices.csprojResolveAssemblyReference.cache
+C:\Users\usuario\Downloads\Erika\Erika\201216064\SOAPServices\bin\SOAPServices.dll.config
+C:\Users\usuario\Downloads\Erika\Erika\201216064\SOAPServices\bin\SOAPServices.dll
+C:\Users\usuario\Downloads\Erika\Erika\201216064\SOAPServices\bin\SOAPServices.pdb
+C:\Users\usuario\Downloads\Erika\Erika\201216064\SOAPServices\bin\Iesi.Collections.dll
+C:\Users\usuario\Downloads\Erika\Erika\201216064\SOAPServices\bin\NHibernate.dll
+C:\Users\usuario\Downloads\Erika\Erika\201216064\SOAPServices\obj\Debug\SOAPServices.dll
+C:\Users\usuario\Downloads\Erika\Erika\201216064\SOAPServices\obj\Debug\SOAPServices.pdb

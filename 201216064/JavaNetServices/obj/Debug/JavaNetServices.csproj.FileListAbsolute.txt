@@ -1,0 +1,8 @@
+C:\Users\usuario\Downloads\Erika\Erika\201216064\JavaNetServices\bin\JavaNetServices.dll.config
+C:\Users\usuario\Downloads\Erika\Erika\201216064\JavaNetServices\bin\JavaNetServices.dll
+C:\Users\usuario\Downloads\Erika\Erika\201216064\JavaNetServices\bin\JavaNetServices.pdb
+C:\Users\usuario\Downloads\Erika\Erika\201216064\JavaNetServices\bin\Iesi.Collections.dll
+C:\Users\usuario\Downloads\Erika\Erika\201216064\JavaNetServices\bin\NHibernate.dll
+C:\Users\usuario\Downloads\Erika\Erika\201216064\JavaNetServices\obj\Debug\JavaNetServices.dll
+C:\Users\usuario\Downloads\Erika\Erika\201216064\JavaNetServices\obj\Debug\JavaNetServices.pdb
+C:\Users\usuario\Downloads\Erika\Erika\201216064\JavaNetServices\obj\Debug\JavaNetServices.csprojResolveAssemblyReference.cache

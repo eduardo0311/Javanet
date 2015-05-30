@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/JavaNetServices.Dominio" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/JavaNetServices.Dominio" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="Solicitud">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Codigo" type="xs:int" />
+      <xs:element minOccurs="0" name="Proyecto" nillable="true" type="tns:Proyecto" />
+      <xs:element minOccurs="0" name="detalle" nillable="true" type="tns:ArrayOfSolicitudDetalle" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Solicitud" nillable="true" type="tns:Solicitud" />
+  <xs:complexType name="Proyecto">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Cliente" nillable="true" type="tns:Cliente" />
+      <xs:element minOccurs="0" name="CodProyecto" type="xs:int" />
+      <xs:element minOccurs="0" name="NombreProyecto" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Proyecto" nillable="true" type="tns:Proyecto" />
+  <xs:complexType name="Cliente">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CodCliente" type="xs:int" />
+      <xs:element minOccurs="0" name="Correo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="RazonSocialCliente" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="RucCliente" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Cliente" nillable="true" type="tns:Cliente" />
+  <xs:complexType name="ArrayOfSolicitudDetalle">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="SolicitudDetalle" nillable="true" type="tns:SolicitudDetalle" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfSolicitudDetalle" nillable="true" type="tns:ArrayOfSolicitudDetalle" />
+  <xs:complexType name="SolicitudDetalle">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CantidadColabor" type="xs:int" />
+      <xs:element minOccurs="0" name="Codigo" type="xs:int" />
+      <xs:element minOccurs="0" name="Comentario" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ExperienciaRubro" nillable="true" type="tns:ExperienciaRubro" />
+      <xs:element minOccurs="0" name="Perfil" nillable="true" type="tns:Perfil" />
+      <xs:element minOccurs="0" name="Tecnologia" nillable="true" type="tns:Tecnologia" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SolicitudDetalle" nillable="true" type="tns:SolicitudDetalle" />
+  <xs:complexType name="ExperienciaRubro">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CodExperiencia" type="xs:int" />
+      <xs:element minOccurs="0" name="NombreExperiencia" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ExperienciaRubro" nillable="true" type="tns:ExperienciaRubro" />
+  <xs:complexType name="Perfil">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CodPerfil" type="xs:int" />
+      <xs:element minOccurs="0" name="NombrePerfil" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Perfil" nillable="true" type="tns:Perfil" />
+  <xs:complexType name="Tecnologia">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CodTecnologia" type="xs:int" />
+      <xs:element minOccurs="0" name="NombreTecnologia" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Tecnologia" nillable="true" type="tns:Tecnologia" />
+  <xs:complexType name="ArrayOfSolicitud">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Solicitud" nillable="true" type="tns:Solicitud" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfSolicitud" nillable="true" type="tns:ArrayOfSolicitud" />
+</xs:schema>

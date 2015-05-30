@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.31101.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SOAPServicesTest", "SOAPServicesTest\SOAPServicesTest.csproj", "{314F3F57-046A-4D57-B310-491475F71C02}"
+	ProjectSection(ProjectDependencies) = postProject
+		{A05CC9EE-7077-4BFB-9D78-4AF39AA05C83} = {A05CC9EE-7077-4BFB-9D78-4AF39AA05C83}
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Librerias", "Librerias", "{BEF65A3E-2D13-49BA-93C0-772638824DEB}"
+	ProjectSection(SolutionItems) = preProject
+		Librerias\Iesi.Collections.dll = Librerias\Iesi.Collections.dll
+		Librerias\NHibernate.dll = Librerias\NHibernate.dll
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JavaNetServices", "JavaNetServices\JavaNetServices.csproj", "{A05CC9EE-7077-4BFB-9D78-4AF39AA05C83}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{314F3F57-046A-4D57-B310-491475F71C02}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{314F3F57-046A-4D57-B310-491475F71C02}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{314F3F57-046A-4D57-B310-491475F71C02}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{314F3F57-046A-4D57-B310-491475F71C02}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A05CC9EE-7077-4BFB-9D78-4AF39AA05C83}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A05CC9EE-7077-4BFB-9D78-4AF39AA05C83}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A05CC9EE-7077-4BFB-9D78-4AF39AA05C83}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A05CC9EE-7077-4BFB-9D78-4AF39AA05C83}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
