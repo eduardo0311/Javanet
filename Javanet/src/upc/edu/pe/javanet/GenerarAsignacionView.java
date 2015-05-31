@@ -43,8 +43,6 @@ public class GenerarAsignacionView extends CustomComponent implements View,
     SolicitudService service = SolicitudService.createDemoService();
 
     Button logout = new Button("Logout", new Button.ClickListener() {
-    	
-    	//comentario
 
         @Override
         public void buttonClick(ClickEvent event) {
