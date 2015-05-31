@@ -4,3 +4,8 @@ c:\users\user\documents\visual studio 2013\Projects\ProyectoDSDS4\RESTServices\b
 c:\users\user\documents\visual studio 2013\Projects\ProyectoDSDS4\RESTServices\obj\Debug\RESTServices.dll
 c:\users\user\documents\visual studio 2013\Projects\ProyectoDSDS4\RESTServices\obj\Debug\RESTServices.pdb
 C:\Users\user\documents\visual studio 2013\Projects\ProyectoDSDS4\RESTServices\obj\Debug\RESTServices.csprojResolveAssemblyReference.cache
+C:\Users\user\Documents\Visual Studio 2013\Projects\ProyectoDSDS4_Git\Javanet\ProyectoDSDS4\RESTServices\bin\RESTServices.dll.config
+C:\Users\user\Documents\Visual Studio 2013\Projects\ProyectoDSDS4_Git\Javanet\ProyectoDSDS4\RESTServices\bin\RESTServices.dll
+C:\Users\user\Documents\Visual Studio 2013\Projects\ProyectoDSDS4_Git\Javanet\ProyectoDSDS4\RESTServices\bin\RESTServices.pdb
+C:\Users\user\Documents\Visual Studio 2013\Projects\ProyectoDSDS4_Git\Javanet\ProyectoDSDS4\RESTServices\obj\Debug\RESTServices.dll
+C:\Users\user\Documents\Visual Studio 2013\Projects\ProyectoDSDS4_Git\Javanet\ProyectoDSDS4\RESTServices\obj\Debug\RESTServices.pdb

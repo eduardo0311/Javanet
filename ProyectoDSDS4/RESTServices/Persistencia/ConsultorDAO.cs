@@ -12,7 +12,7 @@ namespace RESTServices.Persistencia
         public Consultor Crear(Consultor consultorACrear)
         {
             Consultor consultorCreado = null;
-            string sql = "INSERT INTO t_consultor VALUES (@cod, @nom, @ape, @esp)";
+            string sql = "INSERT INTO t_consultor VALUES (@cod, @nom, @ape, @esp, @cat)";
             using (SqlConnection con = new SqlConnection(ConexionUtil.Cadena))
             {
                 con.Open();
@@ -22,6 +22,7 @@ namespace RESTServices.Persistencia
                     com.Parameters.Add(new SqlParameter("@nom", consultorACrear.Nombre));
                     com.Parameters.Add(new SqlParameter("@ape", consultorACrear.Apellido));
                     com.Parameters.Add(new SqlParameter("@esp", consultorACrear.Especialidad));
+                    com.Parameters.Add(new SqlParameter("@cat", consultorACrear.Categoria));
                     com.ExecuteNonQuery();
                 }
             }
@@ -52,7 +53,8 @@ namespace RESTServices.Persistencia
                                 Codigo = (string)resultado["codigo"],
                                 Nombre = (string)resultado["nombre"],
                                 Apellido=(string)resultado["apellido"],
-                                Especialidad=(string)resultado["especialidad"]
+                                Especialidad=(string)resultado["especialidad"],
+                                Categoria=(string)resultado["categoria"]
                             };
                         }
                     }
@@ -61,13 +63,13 @@ namespace RESTServices.Persistencia
             return consultorEncontrado;
 
         }
-        public Consultor Modificar(Consultor alumnoAModificar)
+        public Consultor Modificar(Consultor consultorAModificar)
         {
             return null;
         }
         public void Eliminar(Consultor consultorAEliminar)
         {
-
+            
         }
         public List<Consultor> ListarTodos()
         {

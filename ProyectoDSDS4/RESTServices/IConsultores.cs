@@ -17,14 +17,22 @@ namespace RESTServices
         [OperationContract]
         [WebInvoke(Method = "POST", UriTemplate = "Consultores", ResponseFormat = WebMessageFormat.Json)]
         Consultor CrearConsultor(Consultor consultorACrear);
+        
         [OperationContract]
         [WebInvoke(Method = "GET", UriTemplate = "Consultores/{codigo}", ResponseFormat = WebMessageFormat.Json)]
         Consultor ObtenerConsultor(String codigo);
+
         [OperationContract]
+        [WebInvoke(Method = "PUT", UriTemplate = "Consultores", ResponseFormat = WebMessageFormat.Json)]
         Consultor ModificarConsultor(Consultor consultorAModificar);
+
         [OperationContract]
-         void EliminarConsultor(String codigo);
+        [WebInvoke(Method = "DELETE", UriTemplate = "Consultores", ResponseFormat = WebMessageFormat.Json)]
+        void EliminarConsultor(Consultor consultorAEliminar);
+        
         [OperationContract]
-        List<Consultor> ListarConsultores(); 
+        List<Consultor> ListarConsultores();
+
+               
     }
 }

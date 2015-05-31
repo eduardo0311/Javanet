@@ -26,12 +26,12 @@ namespace RESTServices
 
         public Consultor ModificarConsultor(Consultor consultorAModificar)
         {
-            return null;
+            return dao.Modificar(consultorAModificar);
         }
 
-        public void EliminarConsultor(string codigo)
+        public void EliminarConsultor(Consultor consultorAEliminar)
         {
-            
+            dao.Eliminar(consultorAEliminar);
         }
 
         public List<Consultor> ListarConsultores()

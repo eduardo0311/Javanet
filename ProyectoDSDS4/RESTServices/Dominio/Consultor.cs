@@ -21,5 +21,8 @@ namespace RESTServices.Dominio
 
         [DataMember]
         public string Especialidad { get; set; }
+
+        [DataMember]
+        public string Categoria { get; set; }
     }
 }
