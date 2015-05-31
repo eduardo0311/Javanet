@@ -11,5 +11,7 @@ public class Consultor {
 		this.codigo = codigo;
 	}
 	
+	
+	
 
 }

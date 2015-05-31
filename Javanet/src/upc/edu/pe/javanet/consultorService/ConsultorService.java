@@ -27,9 +27,10 @@ public class ConsultorService {
 	// http://localhost:8080/RESTfulExample/json/product/post
 		/*public static void main(String[] args) {
 	 
-		
+
 		  try {
 	 
+
 			//URL url = new URL("http://localhost:8080/RESTfulExample/json/product/post");
 			URL url = new URL("http://localhost:58823/Consultores.svc/Consultores");
 			

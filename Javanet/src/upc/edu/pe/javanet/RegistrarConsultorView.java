@@ -88,8 +88,7 @@ public class RegistrarConsultorView extends CustomComponent implements View,
 		frmMsgError.setHeight("50%"); // Default
 		frmMsgError.setMargin(true);
 		
-	
-		
+			
 		HorizontalLayout hlCliente = new HorizontalLayout();
 		hlCliente.setWidth("100%");
 		hlCliente.setHeight("20%"); // Default
@@ -106,7 +105,8 @@ public class RegistrarConsultorView extends CustomComponent implements View,
 		hlCliente.setComponentAlignment(txtNombreCliente, Alignment.MIDDLE_LEFT);
 		frmDatosCliente.addComponent(hlCliente);
 		frmDatosCliente.setComponentAlignment(hlCliente, Alignment.MIDDLE_CENTER);
-
+		
+		
 		HorizontalLayout hlaCliente = new HorizontalLayout();
 		hlaCliente.setWidth("100%");
 		hlaCliente.setHeight("20%"); // Default
