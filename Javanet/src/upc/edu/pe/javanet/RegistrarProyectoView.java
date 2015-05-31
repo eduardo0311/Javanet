@@ -1,5 +1,7 @@
 package upc.edu.pe.javanet;
+
 import java.util.ArrayList;
+import java.util.HashMap;
 
 import upc.edu.pe.javanet.solicitudService.Solicitud;
 import upc.edu.pe.javanet.solicitudService.SolicitudDetalle;
@@ -7,15 +9,22 @@ import upc.edu.pe.javanet.solicitudService.SolicitudService;
 
 import com.vaadin.data.Item;
 import com.vaadin.data.Property;
+import com.vaadin.data.fieldgroup.BeanFieldGroup;
+import com.vaadin.data.util.BeanItemContainer;
+import com.vaadin.data.validator.AbstractValidator;
+import com.vaadin.data.validator.EmailValidator;
+import com.vaadin.navigator.Navigator;
 import com.vaadin.navigator.View;
 import com.vaadin.navigator.ViewChangeListener.ViewChangeEvent;
 import com.vaadin.shared.ui.MarginInfo;
 import com.vaadin.ui.Alignment;
 import com.vaadin.ui.Button;
+import com.vaadin.ui.Button.ClickEvent;
 import com.vaadin.ui.ComboBox;
 import com.vaadin.ui.CssLayout;
 import com.vaadin.ui.CustomComponent;
 import com.vaadin.ui.FormLayout;
+import com.vaadin.ui.Grid;
 import com.vaadin.ui.HorizontalLayout;
 import com.vaadin.ui.Label;
 import com.vaadin.ui.Notification;
@@ -23,44 +32,37 @@ import com.vaadin.ui.Table;
 import com.vaadin.ui.TextArea;
 import com.vaadin.ui.TextField;
 import com.vaadin.ui.VerticalLayout;
-import com.vaadin.ui.Button.ClickEvent;
 import com.vaadin.ui.themes.Reindeer;
 
 public class RegistrarProyectoView extends CustomComponent implements View,
-Button.ClickListener {
+        Button.ClickListener {
 
-		
-	/*
 	public static final String NAME = "";
-
 	Label text = new Label();
-	*/
-		public static final String NAME = "RegistrarProyecto";
-		private final Label text = new Label();
-		
-	SolicitudService service = SolicitudService.createDemoService();
+	
+	    SolicitudService service = SolicitudService.createDemoService();
 
-	Button logout = new Button("Logout", new Button.ClickListener() {
+    Button logout = new Button("Logout", new Button.ClickListener() {
 
-	    @Override
-	    public void buttonClick(ClickEvent event) {
+        @Override
+        public void buttonClick(ClickEvent event) {
 
-	        // "Logout" the user
-	        getSession().setAttribute("user", null);
+            // "Logout" the user
+            getSession().setAttribute("user", null);
 
-	        // Refresh this view, should redirect to login view
-	        getUI().getNavigator().navigateTo(NAME);
-	    }
-	});
-
-
-	public RegistrarProyectoView() {
-
-		Label titulo = new Label();
-		titulo.setValue("Registro de proyecto");
-		titulo.addStyleName("titulo"); 
-	     
-		VerticalLayout frmDatosCliente = new VerticalLayout();
+            // Refresh this view, should redirect to login view
+            getUI().getNavigator().navigateTo(NAME);
+        }
+    });
+    
+    
+    public RegistrarProyectoView() {
+    
+    	Label titulo = new Label();
+    	titulo.setValue("Solicitud de consultores pruebaaaa");
+    	titulo.addStyleName("titulo"); 
+         
+    	VerticalLayout frmDatosCliente = new VerticalLayout();
 		frmDatosCliente.setSizeUndefined();
 		frmDatosCliente.setWidth("100%"); // Default
 		frmDatosCliente.setHeight("50%"); // Default
@@ -85,8 +87,8 @@ Button.ClickListener {
 		frmMsgError.setHeight("50%"); // Default
 		frmMsgError.setMargin(true);
 		
-
-	/*	
+	
+		
 		HorizontalLayout hlCliente = new HorizontalLayout();
 		hlCliente.setWidth("100%");
 		hlCliente.setHeight("20%"); // Default
@@ -94,8 +96,8 @@ Button.ClickListener {
 		lblCliente.setWidth("50%");
 		lblCliente.setHeight("10%"); // Default
 		TextField txtNombreCliente = new TextField("");
-		txtNombreCliente.setValue("Julio Alejandro");
-		txtNombreCliente.setReadOnly(true);
+		txtNombreCliente.setValue("Banco de Credito del Perú");
+		txtNombreCliente.setReadOnly(true); 
 		txtNombreCliente.setWidth("100%");
 		txtNombreCliente.setHeight("10%"); // Default
 		hlCliente.addComponent(lblCliente);
@@ -107,7 +109,7 @@ Button.ClickListener {
 				
 		HorizontalLayout hlProyecto = new HorizontalLayout();
 		hlProyecto.setWidth("100%");
-		Label lblProyecto = new Label("Ramirez Bustamante");
+		Label lblProyecto = new Label("Nombre Proyecto");
 		lblProyecto.setWidth("80%");
 		lblProyecto.setHeight("10%"); // Default
 		final ComboBox cmbProyecto = new ComboBox("");
@@ -116,12 +118,12 @@ Button.ClickListener {
 		cmbProyecto.setNullSelectionAllowed(true);
 		cmbProyecto.addItem("-SELECCIONE-");
 		cmbProyecto.setNullSelectionItemId("-SELECCIONE-");
-	    
+        
 		cmbProyecto.addItem("Proyecto Home Banking");
 		cmbProyecto.addItem("Proyecto Compra Virtual");
 		cmbProyecto.addItem("Proyecto Televentas");
 		//cmbProyecto.setWidth("400px");
-		cmbProyecto.setImmediate(true); */
+		cmbProyecto.setImmediate(true);
 		
 		HorizontalLayout hlProyectoMsg = new HorizontalLayout();
 		hlProyectoMsg.setWidth("100%");
@@ -129,14 +131,14 @@ Button.ClickListener {
 		//new Notification("Seleccione un proyecto!",,Type.).show(Page.getCurrent());
 		
 		
-		final Label lblProyectoMsgError = new Label("Registrar un proyecto!");
+		final Label lblProyectoMsgError = new Label("Seleccione un proyecto!");
 		lblProyectoMsgError.setVisible(false);
 		lblProyectoMsgError.setWidth("100%");
 		lblProyectoMsgError.setHeight("10%");
 		hlProyectoMsg.addComponent(new Label(""));
 		hlProyectoMsg.addComponent(lblProyectoMsgError);
 		hlProyectoMsg.setComponentAlignment(lblProyectoMsgError, Alignment.MIDDLE_LEFT);
-	/*	
+		
 		hlProyecto.addComponent(lblProyecto);
 		hlProyecto.addComponent(cmbProyecto);
 		hlProyecto.setComponentAlignment(lblProyecto, Alignment.MIDDLE_RIGHT);
@@ -146,12 +148,12 @@ Button.ClickListener {
 		frmDatosCliente.addComponent(hlProyectoMsg);
 		frmDatosCliente.setComponentAlignment(hlProyectoMsg, Alignment.MIDDLE_CENTER);
 		
-		*/
+		
 		FormLayout flDatosSolicitus = new FormLayout();
 		
 				
 		// combobox para cantidad de colaboradores
-		final ComboBox cmbCantColab = new ComboBox("Colaboradores");
+		final ComboBox cmbCantColab = new ComboBox("Cantidad de Colaboradores");
 		cmbCantColab.setNullSelectionAllowed(true);
 		cmbCantColab.setWidth("100%");
 		cmbCantColab.setHeight("10%"); // Default
@@ -218,12 +220,12 @@ Button.ClickListener {
 		final TextArea txtComentario = new TextArea("Comentario");
 		txtComentario.setWidth("100%");
 		txtComentario.setHeight("10%"); // Default
-
+	
 		flDatosSolicitus.addComponent(cmbCantColab);
 		flDatosSolicitus.setComponentAlignment(cmbCantColab, Alignment.MIDDLE_LEFT);
 		flDatosSolicitus.addComponent(lblCantColabMsgError);
 		flDatosSolicitus.setComponentAlignment(lblCantColabMsgError, Alignment.MIDDLE_LEFT);
-
+    
 		flDatosSolicitus.addComponent(cmbPerfil);
 		flDatosSolicitus.setComponentAlignment(cmbPerfil, Alignment.MIDDLE_LEFT);
 		flDatosSolicitus.addComponent(lblPerfilMsgError);
@@ -267,7 +269,7 @@ Button.ClickListener {
 	        });*/
 		// refreshSolicitudes(solicitudList);
 		
-	/*	final Table tableDetalle = new Table();
+		final Table tableDetalle = new Table();
 		tableDetalle.addStyleName("components-inside");
 		
 		tableDetalle.addContainerProperty("Cantidad",            String.class,     null);
@@ -277,19 +279,19 @@ Button.ClickListener {
 		tableDetalle.addContainerProperty("",        Button.class,    null);
 		tableDetalle.setPageLength(tableDetalle.size());
 		
-		*/
+		
 		Button btnGrabar = new Button("Grabar");
 		btnGrabar.addClickListener(new Button.ClickListener() {
 		    public void buttonClick(ClickEvent event) {
 		    	int verifica = 0;
-		   /* 	if( cmbProyecto.getValue() ==  null){
+		    	if( cmbProyecto.getValue() ==  null){
 		    		lblProyectoMsgError.setVisible(true);
 		    		verifica++;
 			    	lblMsgError.setVisible(false);
 		    	}else{
 		    		lblProyectoMsgError.setVisible(false);
 		    		//verifica--;
-		    	} */
+		    	}
 		    	
 		    	if(cmbCantColab.getValue() ==  null){
 		    		lblCantColabMsgError.setVisible(true);
@@ -327,7 +329,25 @@ Button.ClickListener {
 		    		//verifica--;
 		    	}
 		    	
-		    		    	
+		    	if(verifica == 0){
+		    		
+		    		//tableDetalle.size();     
+		    		//Notification.show("Tala tiene " +
+		    		//		tableDetalle.size() + " clicked.");
+		    		//int verificaGrabar = service.grabar(tableDetalle);
+		    		int verificaGrabar = grabar(tableDetalle);
+		    		if(verificaGrabar == 0){
+		    			lblMsgError.setVisible(true);
+		    		}else{
+		    			lblMsgError.setValue("ERROR! La solicitud no se generó");
+		    			lblMsgError.setVisible(true);
+		    		}
+             	   
+		    	}else{
+		    		lblMsgError.setVisible(false);
+		    	}
+		    	
+		    	
 		    }
 		});
 
@@ -337,14 +357,14 @@ Button.ClickListener {
 		btnAgregar.addClickListener(new Button.ClickListener() {
 		    public void buttonClick(ClickEvent event) {
 		      	int verifica = 0;
-		   /* 	if( cmbProyecto.getValue() ==  null){
+		    	if( cmbProyecto.getValue() ==  null){
 		    		lblProyectoMsgError.setVisible(true);
 		    		verifica++;
 			    	lblMsgError.setVisible(false);
 		    	}else{
 		    		lblProyectoMsgError.setVisible(false);
 		    		//verifica--;
-		    	} */
+		    	}
 		    	
 		    	if(cmbCantColab.getValue() ==  null){
 		    		lblCantColabMsgError.setVisible(true);
@@ -382,7 +402,27 @@ Button.ClickListener {
 		    		//verifica--;
 		    	}
 		    	
-		    	
+		    	if(verifica == 0){
+		    		//lblMsgError.setVisible(true);
+		    		   
+             	    Button generarSolicitudField = new Button("Eliminar");
+             	    generarSolicitudField.setData(tableDetalle.size()+1);
+             	    generarSolicitudField.addClickListener(new Button.ClickListener() {
+             	    	public void buttonClick(ClickEvent event) {
+             	    		Integer iid = (Integer)event.getButton().getData();
+             	    		tableDetalle.removeItem(iid);
+             	    		
+             	    	} 
+             	    });
+             	    generarSolicitudField.addStyleName("link");
+         	    
+             	   tableDetalle.addItem(new Object[] {cmbCantColab.getValue().toString(), cmbPerfil.getValue().toString(),
+             			  cmbTecnologia.getValue().toString(), cmbExperRubro.getValue().toString(), generarSolicitudField},
+         	                  tableDetalle.size()+1);
+             	   tableDetalle.setPageLength(tableDetalle.size());
+		    	}else{
+		    		lblMsgError.setVisible(false);
+		    	}
 		    	
 		    	
 		    }
@@ -392,7 +432,7 @@ Button.ClickListener {
 		
 		btnCancelar.addClickListener(new Button.ClickListener() {
 		    public void buttonClick(ClickEvent event) {
-/*		    	cmbProyecto.select(null); */
+		    	cmbProyecto.select(null);
 		    	cmbCantColab.select(null);
 		    	cmbPerfil.select(null);
 		    	cmbTecnologia.select(null);
@@ -423,50 +463,88 @@ Button.ClickListener {
 	     salir.setSpacing(true);
 		 salir.setMargin(new MarginInfo  (true, true, true, true));
 	    	
-		
+    	
 		VerticalLayout frmSolColabPadre = new VerticalLayout(titulo, frmDatosCliente,frmSolicitudConsultores, frmSolConBotones, frmMsgError);
 		frmSolColabPadre.setSizeFull();
 		frmSolColabPadre.setSpacing(true);
 		frmSolColabPadre.setComponentAlignment(titulo, Alignment.TOP_LEFT);
 		frmSolColabPadre.setMargin(new MarginInfo  (true, true, true, true));
 		
-		  
+		 VerticalLayout tablaDatos = new VerticalLayout(tableDetalle, btnGrabar);
+		 //tablaDatos.setCaption("Hola");
+		 tablaDatos.setSpacing(true);
+		 tablaDatos.setSpacing(true);
+		 tablaDatos.setSpacing(true);
+		 tablaDatos.setSpacing(true);
+		 tablaDatos.setSpacing(true);
+		 tablaDatos.setSpacing(true);
+		 tablaDatos.setSpacing(true);
+		 //tablaDatos.setSizeFull();
+		 tableDetalle.setSizeFull();
+		 //tableDetalle.setWidth("50%");
+		 tablaDatos.setExpandRatio(tableDetalle, 1);
+		 //tablaDatos.setComponentAlignment(titulo, Alignment.BOTTOM_CENTER);
+		 //tablaDatos.setMargin(new MarginInfo  (true, true, true, true));
+		 
 		
-	/*    HorizontalLayout viewLayout = new HorizontalLayout(frmSolColabPadre, tablaDatos );
-	    viewLayout.setSizeFull();
-	    viewLayout.setComponentAlignment(frmSolColabPadre, Alignment.MIDDLE_CENTER);
-	    viewLayout.setStyleName(Reindeer.LAYOUT_BLUE);
-	    //viewLayout.setExpandRatio(tablaDatos, 2);
-	    setCompositionRoot(new CssLayout(bienvenido, viewLayout, salir));
-	*/
-	}
+        HorizontalLayout viewLayout = new HorizontalLayout(frmSolColabPadre, tablaDatos );
+        viewLayout.setSizeFull();
+        viewLayout.setComponentAlignment(frmSolColabPadre, Alignment.MIDDLE_CENTER);
+        viewLayout.setStyleName(Reindeer.LAYOUT_BLUE);
+        //viewLayout.setExpandRatio(tablaDatos, 2);
+        setCompositionRoot(new CssLayout(bienvenido, viewLayout, salir));
+    
+    }
 
-	@Override
-	public void enter(ViewChangeEvent event) {
-		 String username = String.valueOf(getSession().getAttribute("user"));
+    @Override
+    public void enter(ViewChangeEvent event) {
+    	 String username = String.valueOf(getSession().getAttribute("user"));
 
-	     // And show the username
-	     text.setValue("BIENVENIDO " + username);
-	     text.addStyleName("bienvenido"); 
-	}
+         // And show the username
+         text.setValue("BIENVENIDO " + username);
+         text.addStyleName("bienvenido"); 
+    }
 
 	@Override
 	public void buttonClick(ClickEvent event) {
 		
 		
 	}
-
-
-
+	
+	
+	
 	//void refreshSolicitudes(Grid solicitudList) {
-//		solicitudList.setContainerDataSource(new BeanItemContainer<SolicitudDetalle>(
-//	                SolicitudDetalle.class, service.findAll()));
+	//	solicitudList.setContainerDataSource(new BeanItemContainer<SolicitudDetalle>(
+	//                SolicitudDetalle.class, service.findAll()));
 	     //contactForm.setVisible(false);
-	//}
+    //}
 	//final HashMap<Integer,TextField> valueFields =
-//		    new HashMap<Integer,TextField>();
-
-
+	//	    new HashMap<Integer,TextField>();
+	//BeanFieldGroup<Item> formFieldBindings;
+	public int grabar(Table tableDetalle) {
+		ArrayList arrayList = new ArrayList();
+		Solicitud solicitud = new Solicitud();
+		solicitud.setId(1);
+		solicitud.setCodProyecto(1);
+		Item item = tableDetalle.getItem(1);
+		Property prop =  item.getItemProperty(1);
+		
+		Notification.show("datos " + tableDetalle.getItem(1));
+		//Notification.show("datos " + prop.getValue());
+		//formFieldBindings = BeanFieldGroup
+              //  .bindFieldsBuffered(tableDetalle.getItem(1), this);
+		//valueFields = tableDetalle.getItem(1);
+		String cadena =  tableDetalle.getItem(1).toString();
+		String caden [] = cadena.split("");
+		
+		for(int i=0; i< tableDetalle.size(); i++){
+			SolicitudDetalle solicitudDetalle = new SolicitudDetalle();
+			solicitudDetalle.setId(1);
+			//solicitudDetalle.setCantidad(tableDetalle.getItem(new Integer(i));
+			
+		}
+		return 1;
 	}
-
-
+   
+    
+}
