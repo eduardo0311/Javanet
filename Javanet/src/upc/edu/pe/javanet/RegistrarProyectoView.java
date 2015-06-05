@@ -59,7 +59,7 @@ public class RegistrarProyectoView extends CustomComponent implements View,
     public RegistrarProyectoView() {
     
     	Label titulo = new Label();
-    	titulo.setValue("Solicitud de consultores pruebaaaa");
+    	titulo.setValue("Registrar Proyecto");
     	titulo.addStyleName("titulo"); 
          
     	VerticalLayout frmDatosCliente = new VerticalLayout();
